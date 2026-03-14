@@ -9,6 +9,7 @@ site:
 
 branding:
   logo: "/assets/logo.png"
+  logoLight: "/assets/logoLIGHT.png"
   primaryColor: "#0C3330"
   secondaryColor: "#071F1C"
   accentColor: "#F26419"
