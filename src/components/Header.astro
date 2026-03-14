@@ -77,16 +77,6 @@ const currentPath = Astro.url.pathname;
               Home
             </a>
           </li>
-          <li role="none">
-            <a
-              href={`${base}about/`}
-              class={`px-4 py-2 text-sm font-medium rounded-lg transition-all ${currentPath.endsWith('/about') || currentPath.endsWith('/about/') ? 'text-blue-700 bg-blue-50' : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'}`}
-              role="menuitem"
-              aria-current={currentPath.endsWith('/about') || currentPath.endsWith('/about/') ? 'page' : undefined}
-            >
-              About
-            </a>
-          </li>
           {config.features.products && (
             <li role="none">
               <a
@@ -175,13 +165,6 @@ const currentPath = Astro.url.pathname;
           aria-current={currentPath === base || currentPath === base.slice(0, -1) ? 'page' : undefined}
         >
           Home
-        </a>
-        <a
-          href={`${base}about/`}
-          class={`block px-4 py-3 text-base font-medium rounded-lg transition-all ${currentPath.endsWith('/about') || currentPath.endsWith('/about/') ? 'text-blue-700 bg-blue-50' : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'}`}
-          aria-current={currentPath.endsWith('/about') || currentPath.endsWith('/about/') ? 'page' : undefined}
-        >
-          About
         </a>
         {config.features.products && (
           <a

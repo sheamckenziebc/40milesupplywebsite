@@ -24,10 +24,6 @@ const faqs = [
     answer: "Yes. We offer Whitehorse supplier pickups — collecting from stores, suppliers, or service providers in Whitehorse and coordinating delivery back to Mayo on our scheduled runs. Details and pricing are quote-based."
   },
   {
-    question: "Who is this service for?",
-    answer: "We're built for local businesses, contractors and project crews, community organizations and offices, households and small operators, and suppliers who need reliable movement on the Mayo–Whitehorse route. If you need practical freight support in this corridor, we're here to help."
-  },
-  {
     question: "How do I get a quote?",
     answer: "Use our contact form or call/email. Tell us what you need to move, pickup and delivery locations, and preferred timing. We'll respond with next steps and a quote. No obligation."
   },
@@ -60,42 +56,16 @@ const faqJsonLd = JSON.stringify(faqObj);
 <BaseLayout title={`FAQ | ${config.site.title}`} description="Frequently asked questions about 40 Mile Supply freight services, weekend runs, Whitehorse pickups, quotes, and the Mayo–Whitehorse route.">
   <Header slot="header" />
 
-  <!-- Hero -->
-  <section class="relative bg-gradient-to-br from-slate-900 via-[#1F4A46] to-slate-800 py-20">
-    <div class="absolute inset-0 opacity-5">
-      <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;0.15&quot;%3E%3Cpath d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
-    </div>
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <span class="text-amber-400 font-semibold text-sm uppercase tracking-wider">Common Questions</span>
-      <h1 class="text-4xl md:text-5xl font-extrabold text-white mt-2 mb-6">
-        Frequently Asked <span class="text-amber-400">Questions</span>
-      </h1>
-      <p class="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
-        Straight answers about our freight services and the Mayo–Whitehorse route.
-      </p>
-    </div>
-  </section>
-
-  <!-- FAQ Accordion -->
-  <section class="py-20 bg-white">
+  <section class="py-16 bg-white">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="mb-8 animate-on-scroll">
-        <div class="relative">
-          <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-          <input
-            type="text"
-            id="faq-search"
-            placeholder="Search questions..."
-            class="w-full pl-12 pr-4 py-3.5 border border-gray-300 rounded-xl text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#1F4A46] focus:border-[#1F4A46] transition-colors"
-            autocomplete="off"
-          />
-        </div>
-        <p id="faq-count" class="text-sm text-gray-400 mt-2 hidden"></p>
+      <div class="mb-12 animate-on-scroll">
+        <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Frequently Asked Questions</h1>
+        <p class="text-lg text-gray-600">Straight answers about our freight services and the Mayo–Whitehorse route.</p>
       </div>
 
-      <div class="space-y-4 stagger-children" id="faq-list">
+      <div class="space-y-3 stagger-children" id="faq-list">
         {faqs.map((faq, index) => (
-          <details class="animate-on-scroll group bg-gray-50 rounded-2xl border border-gray-200 overflow-hidden faq-item" data-question={faq.question.toLowerCase()} data-answer={faq.answer.toLowerCase()} open={index === 0}>
+          <details class="animate-on-scroll group bg-gray-50 rounded-2xl border border-gray-200 overflow-hidden" open={index === 0}>
             <summary class="flex items-center justify-between cursor-pointer px-6 py-5 text-left font-semibold text-gray-900 hover:text-[#1F4A46] transition-colors list-none [&::-webkit-details-marker]:hidden">
               <span class="pr-4">{faq.question}</span>
               <svg class="w-5 h-5 text-gray-400 flex-shrink-0 group-open:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -109,66 +79,24 @@ const faqJsonLd = JSON.stringify(faqObj);
         ))}
       </div>
 
-      <div id="faq-no-results" class="hidden text-center py-12">
-        <svg class="w-12 h-12 text-gray-300 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-        <p class="text-gray-500 font-medium">No matching questions found</p>
-        <p class="text-gray-400 text-sm mt-1">Try a different search term or <a href={`${base}contact/`} class="text-[#1F4A46] hover:underline">contact us</a></p>
-      </div>
-    </div>
-  </section>
-
-  <script>
-    document.addEventListener('astro:page-load', () => {
-      const searchInput = document.getElementById('faq-search') as HTMLInputElement;
-      const faqItems = document.querySelectorAll('.faq-item') as NodeListOf<HTMLElement>;
-      const noResults = document.getElementById('faq-no-results');
-      const faqCount = document.getElementById('faq-count');
-      if (!searchInput || !faqItems.length) return;
-
-      searchInput.addEventListener('input', () => {
-        const query = searchInput.value.toLowerCase().trim();
-        let visible = 0;
-        faqItems.forEach((item) => {
-          const q = item.dataset.question || '';
-          const a = item.dataset.answer || '';
-          const match = !query || q.includes(query) || a.includes(query);
-          item.style.display = match ? '' : 'none';
-          if (match) visible++;
-        });
-        if (noResults) noResults.classList.toggle('hidden', visible > 0);
-        if (faqCount) {
-          if (query) {
-            faqCount.textContent = `Showing ${visible} of ${faqItems.length} questions`;
-            faqCount.classList.remove('hidden');
-          } else {
-            faqCount.classList.add('hidden');
-          }
-        }
-      });
-    });
-  </script>
-
-  <!-- Still Have Questions CTA -->
-  <section class="py-16 bg-gray-50">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">Still have questions?</h2>
-      <p class="text-gray-600 mb-6">
-        Reach out by phone or send us a message and we'll get back to you.
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a
-          href={`${base}contact/`}
-          class="inline-flex items-center justify-center bg-[#1F4A46] text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-colors"
-        >
-          Contact Us
-        </a>
-        <a
-          href={`tel:${config.contact.phone}`}
-          class="inline-flex items-center justify-center border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
-        >
-          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-          Call Us
-        </a>
+      <div class="mt-14 pt-10 border-t border-gray-100 text-center animate-on-scroll">
+        <h2 class="text-xl font-bold text-gray-900 mb-3">Still have questions?</h2>
+        <p class="text-gray-600 mb-6">Reach out by phone or send us a message.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href={`${base}contact/`}
+            class="inline-flex items-center justify-center bg-[#1F4A46] text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-colors"
+          >
+            Contact Us
+          </a>
+          <a
+            href={`tel:${config.contact.phone}`}
+            class="inline-flex items-center justify-center border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
+          >
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            Call Us
+          </a>
+        </div>
       </div>
     </div>
   </section>
