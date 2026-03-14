@@ -34,7 +34,7 @@ const currentYear = new Date().getFullYear();
 
       <!-- Links -->
       <div>
-        <h3 class="label-tag text-gray-500 mb-5">Navigation</h3>
+        <h3 class="label-tag text-gray-400 mb-5">Navigation</h3>
         <ul class="space-y-3 text-sm">
           <li><a href={base} class="text-gray-400 hover:text-brand-cyan transition-colors">Home</a></li>
           {config.features.faq && (
@@ -48,7 +48,7 @@ const currentYear = new Date().getFullYear();
 
       <!-- Contact -->
       <div>
-        <h3 class="label-tag text-gray-500 mb-5">Contact</h3>
+        <h3 class="label-tag text-gray-400 mb-5">Contact</h3>
         <div class="space-y-3 text-sm">
           <div class="flex items-center gap-2.5">
             <svg class="w-4 h-4 text-brand-cyan-dim flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -107,8 +107,8 @@ const currentYear = new Date().getFullYear();
 
   <!-- Bottom bar -->
   <div class="border-t border-brand-teal-mid/30">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600">
-      <p>&copy; {currentYear} {config.site.title}. All rights reserved. Mayo, Yukon.</p>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row justify-between items-center text-xs text-gray-400">
+      <p class="text-gray-400">&copy; {currentYear} {config.site.title}. All rights reserved. Mayo, Yukon.</p>
       <div class="flex gap-5 mt-2 md:mt-0">
         <a href={`${base}privacy/`} class="hover:text-brand-cyan transition-colors">Privacy</a>
         <a href={`${base}terms/`} class="hover:text-brand-cyan transition-colors">Terms</a>
