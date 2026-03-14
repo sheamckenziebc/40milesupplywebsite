@@ -4,21 +4,22 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: {
-          50: '#eff6ff',
-          100: '#dbeafe',
-          200: '#bfdbfe',
-          300: '#93c5fd',
-          400: '#60a5fa',
-          500: '#3b82f6',
-          600: '#2563eb',
-          700: '#1d4ed8',
-          800: '#1e40af',
-          900: '#1e3a8a',
+        brand: {
+          navy:        '#080E1A',
+          'navy-mid':  '#0B1929',
+          teal:        '#0C3330',
+          'teal-dark': '#071F1C',
+          'teal-mid':  '#0A2A26',
+          cyan:        '#0BD4C8',
+          'cyan-dim':  '#089990',
+          orange:      '#F26419',
+          'orange-dk': '#D4550F',
+          surface:     '#F4F8F7',
         },
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans:    ['Inter', 'system-ui', 'sans-serif'],
+        display: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
@@ -26,22 +27,18 @@ export default {
       },
       keyframes: {
         fadeIn: {
-          '0%': { opacity: '0' },
+          '0%':   { opacity: '0' },
           '100%': { opacity: '1' },
         },
         slideUp: {
-          '0%': { transform: 'translateY(20px)', opacity: '0' },
-          '100%': { transform: 'translateY(0)', opacity: '1' },
+          '0%':   { transform: 'translateY(20px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)',    opacity: '1' },
         },
       },
     },
   },
   plugins: [
-    // Add forms plugin for better form styling
-    require('@tailwindcss/forms')({
-      strategy: 'class',
-    }),
-    // Add typography plugin for content styling
+    require('@tailwindcss/forms')({ strategy: 'class' }),
     require('@tailwindcss/typography'),
   ],
-} 
+}

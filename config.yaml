@@ -9,9 +9,9 @@ site:
 
 branding:
   logo: "/assets/logo.png"
-  primaryColor: "#1F4A46"
-  secondaryColor: "#122F2C"
-  accentColor: "#D97706"
+  primaryColor: "#0C3330"
+  secondaryColor: "#071F1C"
+  accentColor: "#F26419"
   fontFamily: "Inter, system-ui, sans-serif"
 
 contact:

@@ -48,9 +48,9 @@ const breadcrumbJsonLd = JSON.stringify(bcObj);
 ---
 
 {breadcrumbs.length > 1 && (
-  <nav aria-label="Breadcrumb" class="bg-gray-50 px-4 sm:px-6 lg:px-8">
+  <nav aria-label="Breadcrumb" class="bg-brand-navy/80 border-b border-brand-teal-mid/30 px-4 sm:px-6 lg:px-8">
     <div class="max-w-7xl mx-auto py-3">
-      <ol class="flex items-center space-x-2 text-sm text-gray-500">
+      <ol class="flex items-center space-x-2 text-xs text-gray-500">
         {breadcrumbs.map((crumb, index) => (
           <li class="flex items-center">
             {index > 0 && (
@@ -59,13 +59,13 @@ const breadcrumbJsonLd = JSON.stringify(bcObj);
               </svg>
             )}
             {index === breadcrumbs.length - 1 ? (
-              <span class="font-medium text-gray-900" aria-current="page">
+              <span class="font-medium text-gray-300" aria-current="page">
                 {crumb.name}
               </span>
             ) : (
               <a
                 href={crumb.href}
-                class="hover:text-blue-600 transition-colors"
+                class="text-gray-500 hover:text-brand-cyan transition-colors"
                 itemprop="item"
               >
                 <span itemprop="name">{crumb.name}</span>
