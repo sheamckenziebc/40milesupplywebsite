@@ -10,7 +10,8 @@ const configPath = join(process.cwd(), 'config.yaml');
 const config = yaml.load(readFileSync(configPath, 'utf8'));
 const base = import.meta.env.BASE_URL;
 
-const cContactPt: Record<string, any> = { telephone: config.contact.phone, contactType: "Customer Service", email: config.contact.email, availableLanguage: "English" };
+const cContactPt: Record<string, any> = { telephone: config.contact.phone, contactType: "Customer Service", availableLanguage: "English" };
+if (config.contact.email) cContactPt.email = config.contact.email;
 cContactPt["@type"] = "ContactPoint";
 const cAddr: Record<string, any> = { addressLocality: "Mayo", addressRegion: "Yukon", addressCountry: "CA" };
 cAddr["@type"] = "PostalAddress";
@@ -165,12 +166,12 @@ const contactJsonLd = JSON.stringify(contactObj);
                   value: config.contact.phone,
                   href: `tel:${config.contact.phone}`,
                 },
-                {
+                ...(config.contact.email ? [{
                   icon: "M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
                   label: "Email",
                   value: config.contact.email,
                   href: `mailto:${config.contact.email}`,
-                },
+                }] : []),
                 {
                   icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z",
                   label: "Hours",

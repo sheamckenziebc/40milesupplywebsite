@@ -44,7 +44,7 @@ const jsonLdObj: Record<string, any> = {
   logo: logoUrl,
   image: logoUrl,
   telephone: config.contact.phone,
-  email: config.contact.email,
+  ...(config.contact.email ? { email: config.contact.email } : {}),
   address: {
     "@type": "PostalAddress",
     addressLocality: "Mayo",
