@@ -52,7 +52,7 @@ const currentPath = Astro.url.pathname;
       <div class="flex items-center">
         <a href={base} class="flex items-center space-x-2 group" aria-label="Home">
           <img
-            src={`${base}assets/logo.svg`}
+            src={`${base}${config.branding.logo.replace(/^\//, '')}`}
             alt={`${config.site.title} logo`}
             class="h-9 w-auto transition-transform group-hover:scale-105"
             width="36"
@@ -60,7 +60,6 @@ const currentPath = Astro.url.pathname;
           />
           <div class="flex flex-col">
             <span class="text-lg font-extrabold text-gray-900 leading-tight">{config.site.title}</span>
-            <span class="text-[10px] text-gray-500 font-medium uppercase tracking-widest hidden sm:block">General Contractor</span>
           </div>
         </a>
       </div>
@@ -112,16 +111,18 @@ const currentPath = Astro.url.pathname;
               </a>
             </li>
           )}
-          <li role="none">
-            <a
-              href={`${base}templates/`}
-              class={`px-4 py-2 text-sm font-medium rounded-lg transition-all ${currentPath.includes('/templates') ? 'text-blue-700 bg-blue-50' : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'}`}
-              role="menuitem"
-              aria-current={currentPath.includes('/templates') ? 'page' : undefined}
-            >
-              Templates
-            </a>
-          </li>
+          {config.features.faq && (
+            <li role="none">
+              <a
+                href={`${base}faq/`}
+                class={`px-4 py-2 text-sm font-medium rounded-lg transition-all ${currentPath.includes('/faq') ? 'text-blue-700 bg-blue-50' : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'}`}
+                role="menuitem"
+                aria-current={currentPath.includes('/faq') ? 'page' : undefined}
+              >
+                FAQ
+              </a>
+            </li>
+          )}
           <li role="none">
             <a
               href={`${base}contact/`}
@@ -138,7 +139,7 @@ const currentPath = Astro.url.pathname;
           href={`${base}contact/`}
           class="ml-4 inline-flex items-center bg-amber-500 text-slate-900 px-5 py-2.5 rounded-lg font-bold text-sm hover:bg-amber-400 transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5"
         >
-          Free Estimate
+          Request Quote
         </a>
       </nav>
 
@@ -200,13 +201,15 @@ const currentPath = Astro.url.pathname;
             Blog
           </a>
         )}
-        <a
-          href={`${base}templates/`}
-          class={`block px-4 py-3 text-base font-medium rounded-lg transition-all ${currentPath.includes('/templates') ? 'text-blue-700 bg-blue-50' : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'}`}
-          aria-current={currentPath.includes('/templates') ? 'page' : undefined}
-        >
-          Templates
-        </a>
+        {config.features.faq && (
+          <a
+            href={`${base}faq/`}
+            class={`block px-4 py-3 text-base font-medium rounded-lg transition-all ${currentPath.includes('/faq') ? 'text-blue-700 bg-blue-50' : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'}`}
+            aria-current={currentPath.includes('/faq') ? 'page' : undefined}
+          >
+            FAQ
+          </a>
+        )}
         <a
           href={`${base}contact/`}
           class={`block px-4 py-3 text-base font-medium rounded-lg transition-all ${currentPath.endsWith('/contact') || currentPath.endsWith('/contact/') ? 'text-blue-700 bg-blue-50' : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'}`}
@@ -218,7 +221,7 @@ const currentPath = Astro.url.pathname;
           href={`${base}contact/`}
           class="block mx-2 mt-3 text-center bg-amber-500 text-slate-900 px-4 py-3 rounded-lg font-bold hover:bg-amber-400 transition-colors"
         >
-          Get a Free Estimate
+          Request Quote
         </a>
       </div>
     </div>

@@ -28,47 +28,43 @@ const {
 
 const fullTitle = title === config.site.title ? title : `${title} | ${config.site.title}`;
 
-// Pre-compute JSON-LD data for the script
+// Pre-compute JSON-LD: LocalBusiness (generic, no construction-specific schema)
 const logoUrl = new URL(config.branding.logo, Astro.site).href;
 const sameAsList = [
   config.social.facebook,
   config.social.twitter,
   config.social.instagram,
-  config.social.linkedin
+  config.social.linkedin,
+  config.social.youtube
 ].filter(Boolean);
-const jsonLdObj: Record<string, any> = {};
-jsonLdObj["@context"] = "https://schema.org";
-jsonLdObj["@type"] = "HomeAndConstructionBusiness";
-jsonLdObj.name = config.site.title;
-jsonLdObj.description = config.site.description;
-jsonLdObj.url = config.site.url;
-jsonLdObj.logo = logoUrl;
-jsonLdObj.image = logoUrl;
-jsonLdObj.telephone = config.contact.phone;
-jsonLdObj.email = config.contact.email;
-jsonLdObj.priceRange = "$$";
-const addr: Record<string, any> = {
-  streetAddress: "4821 Pearl St, Suite 200",
-  addressLocality: "Boulder",
-  addressRegion: "CO",
-  postalCode: "80301",
-  addressCountry: "US"
+const jsonLdObj: Record<string, any> = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: config.site.title,
+  description: config.site.description,
+  url: config.site.url,
+  logo: logoUrl,
+  image: logoUrl,
+  telephone: config.contact.phone,
+  email: config.contact.email,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Mayo",
+    addressRegion: "Yukon",
+    addressCountry: "CA"
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: config.integrations.map_coordinates.lat,
+    longitude: config.integrations.map_coordinates.lng
+  },
+  areaServed: [
+    { "@type": "Place", name: "Mayo, Yukon" },
+    { "@type": "Place", name: "Whitehorse, Yukon" },
+    { "@type": "Place", name: "Silver Trail region" }
+  ],
+  sameAs: sameAsList
 };
-addr["@type"] = "PostalAddress";
-jsonLdObj.address = addr;
-const geo: Record<string, any> = {
-  latitude: config.integrations.map_coordinates.lat,
-  longitude: config.integrations.map_coordinates.lng
-};
-geo["@type"] = "GeoCoordinates";
-jsonLdObj.geo = geo;
-jsonLdObj.openingHoursSpecification = [
-  { dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday"], opens: "07:00", closes: "18:00" },
-  { dayOfWeek: ["Saturday"], opens: "08:00", closes: "14:00" }
-].map(spec => { const s: Record<string, any> = { ...spec }; s["@type"] = "OpeningHoursSpecification"; return s; });
-jsonLdObj.areaServed = { name: "Denver Metropolitan Area, Colorado" };
-jsonLdObj.areaServed["@type"] = "GeoCircle";
-jsonLdObj.sameAs = sameAsList;
 const jsonLd = JSON.stringify(jsonLdObj);
 ---
 
@@ -369,7 +365,7 @@ const jsonLd = JSON.stringify(jsonLdObj);
       href={`${base}contact/`}
       class="flex-1 inline-flex items-center justify-center bg-amber-500 text-slate-900 py-3 rounded-lg font-bold text-sm hover:bg-amber-400 transition-colors"
     >
-      Free Estimate
+      Request Quote
     </a>
   </div>
 

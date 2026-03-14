@@ -1,49 +1,59 @@
-# Summit Pro Builders - Configuration
-# General contractor serving the Denver metro area
+# 40 Mile Supply - Configuration
+# Mayo-based freight service: weekend runs between Mayo and Whitehorse
 
 site:
-  title: "Summit Pro Builders"
-  description: "Denver's trusted general contractor for kitchen remodels, bathroom renovations, home additions, and whole-home renovations. Licensed, insured, and committed to quality craftsmanship."
-  url: "https://sheamckenziebc.github.io/mastertemplate1"
-  author: "Summit Pro Builders"
+  title: "40 Mile Supply"
+  description: "40 Mile Supply is a Mayo, Yukon freight company focused on dependable weekend runs between Mayo and Whitehorse. We move supplies, store pickups, contractor materials, and small commercial freight with practical local service."
+  url: "https://sheamckenziebc.github.io/40milesupplywebsite"
+  author: "[OWNER NAME]"
 
 branding:
-  logo: "/assets/logo.svg"
-  primaryColor: "#1e3a5f"
-  secondaryColor: "#2563eb"
-  accentColor: "#f59e0b"
+  logo: "/assets/logo.png"
+  primaryColor: "#1F4A46"
+  secondaryColor: "#122F2C"
+  accentColor: "#D97706"
   fontFamily: "Inter, system-ui, sans-serif"
 
 contact:
-  email: "info@summitprobuilders.com"
-  phone: "+1 (720) 555-0193"
-  address: "4821 Pearl St, Suite 200, Boulder, CO 80301"
-  businessHours: "Mon-Fri 7AM-6PM | Sat 8AM-2PM"
+  email: "[BUSINESS EMAIL]"
+  phone: "[BUSINESS PHONE]"
+  address: "Mayo, Yukon, Canada"
+  businessHours: "Weekend freight runs by schedule | Quote requests by phone or email"
 
 social:
-  facebook: "https://facebook.com/summitprobuilders"
+  facebook: ""
   twitter: ""
-  instagram: "https://instagram.com/summitprobuilders"
-  linkedin: "https://linkedin.com/company/summitprobuilders"
+  instagram: ""
+  linkedin: ""
   youtube: ""
 
 features:
-  blog: true
+  blog: false
   products: true
-  testimonials: true
+  testimonials: false
   faq: true
   search: false
   comments: false
   analytics: false
 
 integrations:
-  formspree_id: "your-formspree-id"
+  formspree_id: "[FORMSPREE_ID]"
   google_analytics: ""
   map_coordinates:
-    lat: 39.7392
-    lng: -104.9903
+    lat: 63.5943
+    lng: -135.8965
 
 seo:
-  keywords: ["general contractor Denver", "home remodeling Colorado", "kitchen remodel Boulder", "bathroom renovation Denver", "home additions", "licensed contractor", "Summit Pro Builders"]
+  keywords:
+    - "Mayo Yukon freight"
+    - "Whitehorse freight"
+    - "Mayo to Whitehorse delivery"
+    - "weekend freight Yukon"
+    - "Silver Trail logistics"
+    - "Mayo supply runs"
+    - "Yukon contractor freight"
+    - "Whitehorse pickup service"
+    - "local freight Mayo"
+    - "40 Mile Supply"
   og_image: "/assets/og-image.svg"
   twitter_card: "summary_large_image"

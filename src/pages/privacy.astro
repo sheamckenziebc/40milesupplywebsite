@@ -16,18 +16,18 @@ const config = yaml.load(readFileSync(configPath, 'utf8'));
   <section class="py-16 bg-gray-50">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       <h1 class="text-4xl font-extrabold text-gray-900 mb-2">Privacy Policy</h1>
-      <p class="text-gray-500 mb-12">Last updated: January 1, 2025</p>
+      <p class="text-gray-500 mb-12">Last updated: March 2026</p>
 
       <div class="prose prose-lg prose-gray max-w-none">
         <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Information We Collect</h2>
         <p class="text-gray-600 mb-4 leading-relaxed">
-          When you contact us through our website, request an estimate, or engage our services, we may collect the following information:
+          When you contact us through our website, request a freight quote, or use our services, we may collect the following information:
         </p>
         <ul class="list-disc list-inside text-gray-600 mb-6 space-y-2">
-          <li>Name, email address, phone number, and mailing address</li>
-          <li>Project details and property information you share with us</li>
+          <li>Name, email address, phone number, and business or organization name</li>
+          <li>Freight and shipment details you share with us (pickup/delivery locations, timing, description of goods)</li>
           <li>Communication records including emails and form submissions</li>
-          <li>Website usage data collected through standard analytics tools</li>
+          <li>Website usage data collected through standard analytics tools, if enabled</li>
         </ul>
 
         <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">How We Use Your Information</h2>
@@ -35,9 +35,9 @@ const config = yaml.load(readFileSync(configPath, 'utf8'));
           We use your personal information to:
         </p>
         <ul class="list-disc list-inside text-gray-600 mb-6 space-y-2">
-          <li>Respond to your inquiries and provide estimates</li>
-          <li>Schedule consultations and manage active projects</li>
-          <li>Send project updates and relevant communications</li>
+          <li>Respond to your inquiries and provide freight quotes</li>
+          <li>Coordinate pickups, runs, and deliveries</li>
+          <li>Send updates about your shipment or our services</li>
           <li>Improve our website and services</li>
           <li>Comply with legal and regulatory requirements</li>
         </ul>
@@ -59,7 +59,7 @@ const config = yaml.load(readFileSync(configPath, 'utf8'));
 
         <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Your Rights</h2>
         <p class="text-gray-600 mb-6 leading-relaxed">
-          You have the right to request access to, correction of, or deletion of your personal information. To exercise these rights or if you have questions about this policy, please contact us at <a href={`mailto:${config.contact.email}`} class="text-blue-600 hover:text-blue-700">{config.contact.email}</a> or call <a href={`tel:${config.contact.phone}`} class="text-blue-600 hover:text-blue-700">{config.contact.phone}</a>.
+          You have the right to request access to, correction of, or deletion of your personal information. To exercise these rights or if you have questions about this policy, please contact us at <a href={`mailto:${config.contact.email}`} class="text-[#1F4A46] hover:underline">{config.contact.email}</a> or call <a href={`tel:${config.contact.phone}`} class="text-[#1F4A46] hover:underline">{config.contact.phone}</a>.
         </p>
 
         <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Changes to This Policy</h2>
@@ -72,8 +72,8 @@ const config = yaml.load(readFileSync(configPath, 'utf8'));
           If you have any questions about this privacy policy, please contact us at:<br />
           <strong>{config.site.title}</strong><br />
           {config.contact.address}<br />
-          <a href={`mailto:${config.contact.email}`} class="text-blue-600 hover:text-blue-700">{config.contact.email}</a><br />
-          <a href={`tel:${config.contact.phone}`} class="text-blue-600 hover:text-blue-700">{config.contact.phone}</a>
+          <a href={`mailto:${config.contact.email}`} class="text-[#1F4A46] hover:underline">{config.contact.email}</a><br />
+          <a href={`tel:${config.contact.phone}`} class="text-[#1F4A46] hover:underline">{config.contact.phone}</a>
         </p>
       </div>
     </div>

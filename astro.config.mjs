@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://sheamckenziebc.github.io',
-  base: '/mastertemplate1',
+  base: '/40milesupplywebsite',
   trailingSlash: 'always',
   integrations: [
     tailwind({
