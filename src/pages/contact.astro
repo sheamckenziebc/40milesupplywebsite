@@ -33,8 +33,8 @@ const contactJsonLd = JSON.stringify(contactObj);
   <div class="bg-brand-navy border-b border-brand-teal-mid/50 py-12">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <span class="cyan-rule"></span>
-      <h1 class="font-display font-700 text-3xl md:text-4xl text-white mb-2">Request a Freight Quote</h1>
-      <p class="text-gray-400">Tell us what you need to move and we'll respond with clear next steps.</p>
+      <h1 class="font-display font-700 text-3xl md:text-4xl text-white mb-2">Get in Touch</h1>
+      <p class="text-gray-400">Brokerage inquiry, freight quote, or hot shot request — tell us what you need and we'll respond with clear next steps.</p>
     </div>
   </div>
 
@@ -89,26 +89,25 @@ const contactJsonLd = JSON.stringify(contactObj);
             </div>
 
             <div>
-              <label for="freight-type" class="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1.5">Freight Type</label>
+              <label for="freight-type" class="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1.5">Service Type</label>
               <select
                 id="freight-type" name="freight-type"
                 class="w-full px-4 py-3 bg-white border border-gray-200 rounded text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-brand-cyan/30 focus:border-brand-cyan transition-colors"
               >
-                <option value="">Select type...</option>
-                <option value="weekend-freight-run">Weekend Freight Run</option>
-                <option value="whitehorse-pickup">Whitehorse Pickup</option>
-                <option value="business-restock">Business Restock</option>
-                <option value="contractor-project">Contractor / Project Freight</option>
-                <option value="custom">Custom Request</option>
+                <option value="">Select a service...</option>
+                <option value="brokerage">Equipment &amp; Material Brokerage</option>
+                <option value="hotshot">Hot Shot</option>
+                <option value="regular-freight">Regular Freight</option>
+                <option value="custom">Custom / Not Sure</option>
               </select>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label for="pickup" class="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1.5">Pickup Location</label>
+                <label for="pickup" class="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1.5">Pickup / Source Location</label>
                 <input
                   type="text" id="pickup" name="pickup"
-                  placeholder="e.g. Whitehorse"
+                  placeholder="e.g. Whitehorse, Vancouver"
                   class="w-full px-4 py-3 bg-white border border-gray-200 rounded text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-brand-cyan/30 focus:border-brand-cyan transition-colors"
                 />
               </div>
@@ -123,10 +122,10 @@ const contactJsonLd = JSON.stringify(contactObj);
             </div>
 
             <div>
-              <label for="message" class="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1.5">What needs to be moved? *</label>
+              <label for="message" class="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1.5">Tell us what you need *</label>
               <textarea
                 id="message" name="message" rows="4" required
-                placeholder="Describe your freight, quantity, and preferred timing"
+                placeholder="Describe what you need — equipment to source, freight to move, timing, and any relevant details"
                 class="w-full px-4 py-3 bg-white border border-gray-200 rounded text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-brand-cyan/30 focus:border-brand-cyan transition-colors resize-none"
               ></textarea>
             </div>
