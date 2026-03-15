@@ -1,84 +1,38 @@
-- id: "service-1"
-  name: "Weekend Freight Runs"
-  description: "Dependable scheduled freight service between Mayo and Whitehorse for businesses, organizations, contractors, and local customers who need a reliable weekend supply link."
+- id: "brokerage"
+  name: "Equipment & Material Brokerage"
+  tagline: "Your boots on the ground in Whitehorse"
+  description: "We source, coordinate, and arrange equipment and materials from Whitehorse suppliers on your behalf — so you don't need to make the trip. Ideal for contractors, project teams, and businesses that need reliable supply access without leaving Mayo."
   price: "Request Quote"
-  image: "/assets/hero-image.svg"
   category: "services"
   featured: true
+  features:
+    - "Supplier sourcing and coordination"
+    - "Pickup from Whitehorse vendors and stores"
+    - "Delivery to Mayo on scheduled runs"
+    - "Custom material and equipment requests"
+
+- id: "hotshot"
+  name: "Hot Shot"
+  tagline: "Urgent freight, when the schedule can't wait"
+  description: "Time-sensitive freight outside the regular weekend run. When a project is held up, a part is critical, or timing matters — Hot Shot gets it moving without waiting for the next scheduled run."
+  price: "Contact for Availability"
+  category: "services"
+  featured: false
+  features:
+    - "Urgent and time-sensitive delivery"
+    - "Direct run outside the normal schedule"
+    - "Critical parts and project materials"
+    - "Contact us to confirm availability"
+
+- id: "freight"
+  name: "Regular Freight"
+  tagline: "Dependable weekend runs, Mayo \u21d4 Whitehorse"
+  description: "Our core scheduled service — reliable weekend freight runs between Mayo and Whitehorse for businesses, contractors, and local customers who need a steady supply link on the Silver Trail."
+  price: "Request Quote"
+  category: "services"
+  featured: false
   features:
     - "Scheduled weekend route"
     - "Mayo to Whitehorse and return"
-    - "Ideal for routine shipments"
-    - "Local coordination and communication"
-  specifications:
-    serviceType: "Scheduled route service"
-    route: "Mayo ↔ Whitehorse"
-    availability: "Weekend runs"
-
-- id: "service-2"
-  name: "Whitehorse Supplier Pickups"
-  description: "Pickup service from Whitehorse suppliers, retailers, and service providers, coordinated for delivery back to Mayo."
-  price: "Request Quote"
-  image: "/assets/hero-image.svg"
-  category: "services"
-  featured: true
-  features:
-    - "Store and supplier pickups"
-    - "Business supply collection"
-    - "Combined with scheduled freight runs"
-    - "Simple quote-based coordination"
-  specifications:
-    serviceType: "Pickup coordination"
-    route: "Whitehorse to Mayo"
-    availability: "By scheduled run"
-
-- id: "service-3"
-  name: "Business Restock Delivery"
-  description: "Recurring or as-needed freight support for Mayo businesses that need stock, supplies, parts, or operational materials moved from Whitehorse."
-  price: "Request Quote"
-  image: "/assets/about-story.svg"
-  category: "services"
-  featured: false
-  features:
-    - "Recurring restock support"
-    - "Retail and office supply delivery"
-    - "Flexible coordination"
-    - "Built for small business needs"
-  specifications:
-    serviceType: "Business freight support"
-    route: "Whitehorse to Mayo"
-    availability: "Recurring or as needed"
-
-- id: "service-4"
-  name: "Contractor & Project Freight"
-  description: "Freight coordination for contractors, site work, maintenance teams, and project-based operations needing materials, tools, or supplies moved on the Mayo–Whitehorse route."
-  price: "Request Quote"
-  image: "/assets/about-story.svg"
-  category: "services"
-  featured: false
-  features:
-    - "Tools and material movement"
-    - "Project-based coordination"
-    - "Route-focused scheduling"
-    - "Suitable for recurring runs"
-  specifications:
-    serviceType: "Project freight"
-    route: "Mayo ↔ Whitehorse"
-    availability: "By arrangement"
-
-- id: "service-5"
-  name: "Custom Freight Requests"
-  description: "Need something outside the standard run? Contact 40 Mile Supply for custom freight coordination, special handling questions, or one-off transport requests."
-  price: "Contact for Quote"
-  image: "/assets/og-image.svg"
-  category: "custom"
-  featured: false
-  features:
-    - "Custom quote process"
-    - "One-off requests"
-    - "Route-specific planning"
-    - "Future expansion ready"
-  specifications:
-    serviceType: "Custom coordination"
-    route: "Mayo ↔ Whitehorse"
-    availability: "By request"
+    - "General commercial freight"
+    - "Recurring and one-off shipments"

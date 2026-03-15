@@ -30,7 +30,7 @@ social:
 
 features:
   blog: false
-  products: false
+  products: true
   testimonials: false
   faq: true
   search: false
