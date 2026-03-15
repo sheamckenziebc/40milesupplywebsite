@@ -5,21 +5,21 @@ export default {
     extend: {
       colors: {
         brand: {
-          navy:        '#080E1A',
-          'navy-mid':  '#0B1929',
-          teal:        '#0C3330',
-          'teal-dark': '#071F1C',
-          'teal-mid':  '#0A2A26',
-          cyan:        '#0BD4C8',
-          'cyan-dim':  '#089990',
-          orange:      '#F26419',
-          'orange-dk': '#D4550F',
-          surface:     '#F4F8F7',
+          navy:        '#1E2B38',
+          'navy-mid':  '#253444',
+          teal:        '#1E3220',
+          'teal-dark': '#142418',
+          'teal-mid':  '#1A2C1C',
+          cyan:        '#D4921C',
+          'cyan-dim':  '#B07A18',
+          orange:      '#C4521A',
+          'orange-dk': '#A84218',
+          surface:     '#F5F0E6',
         },
       },
       fontFamily: {
-        sans:    ['Inter', 'system-ui', 'sans-serif'],
-        display: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
+        sans:    ['"Source Sans 3"', 'system-ui', 'sans-serif'],
+        display: ['Oswald', 'system-ui', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',

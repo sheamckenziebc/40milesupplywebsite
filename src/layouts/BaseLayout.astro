@@ -74,10 +74,10 @@ const jsonLd = JSON.stringify(jsonLdObj);
   <link rel="icon" type="image/png" href={`${base}favicon.png`} />
   <meta name="generator" content={Astro.generator} />
 
-  <!-- Fonts: Space Grotesk (display) + Inter (body) -->
+  <!-- Fonts: Oswald (display) + Source Sans 3 (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <!-- SEO -->
   <title>{fullTitle}</title>
@@ -108,25 +108,25 @@ const jsonLd = JSON.stringify(jsonLdObj);
   <style is:global>
     /* ── Design tokens ──────────────────────────────── */
     :root {
-      --navy:      #080E1A;
-      --navy-mid:  #0B1929;
-      --teal:      #0C3330;
-      --teal-dark: #071F1C;
-      --teal-mid:  #0A2A26;
-      --cyan:      #0BD4C8;
-      --cyan-dim:  #089990;
-      --orange:    #F26419;
-      --orange-dk: #D4550F;
-      --surface:   #F4F8F7;
+      --navy:      #1E2B38;
+      --navy-mid:  #253444;
+      --teal:      #1E3220;
+      --teal-dark: #142418;
+      --teal-mid:  #1A2C1C;
+      --cyan:      #D4921C;
+      --cyan-dim:  #B07A18;
+      --orange:    #C4521A;
+      --orange-dk: #A84218;
+      --surface:   #F5F0E6;
     }
 
     /* ── Base ───────────────────────────────────────── */
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Inter', system-ui, sans-serif;
+      font-family: 'Source Sans 3', system-ui, sans-serif;
       line-height: 1.65;
-      color: #0D1B2A;
+      color: #1E1C18;
       margin: 0;
       padding: 0;
       -webkit-font-smoothing: antialiased;
@@ -135,9 +135,9 @@ const jsonLd = JSON.stringify(jsonLdObj);
     }
 
     h1, h2, h3, h4, h5, h6 {
-      font-family: 'Space Grotesk', system-ui, sans-serif;
+      font-family: 'Oswald', system-ui, sans-serif;
       line-height: 1.15;
-      letter-spacing: -0.02em;
+      letter-spacing: 0.01em;
     }
 
     /* ── Skip link ──────────────────────────────────── */
@@ -258,8 +258,8 @@ const jsonLd = JSON.stringify(jsonLdObj);
     /* ── Label utility ──────────────────────────────── */
     .label-tag {
       display: inline-block;
-      font-family: 'Space Grotesk', system-ui, sans-serif;
-      font-size: 0.7rem;
+      font-family: 'Oswald', system-ui, sans-serif;
+      font-size: 0.72rem;
       font-weight: 700;
       letter-spacing: 0.12em;
       text-transform: uppercase;
