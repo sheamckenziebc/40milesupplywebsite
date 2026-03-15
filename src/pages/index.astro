@@ -12,6 +12,7 @@ const productsPath = join(process.cwd(), 'src/data/products.yaml');
 const products = yaml.load(readFileSync(productsPath, 'utf8')) as Array<{
   id: string; name: string; tagline: string; description: string;
   price: string; featured: boolean; features: string[];
+  markets?: string[]; routes?: string[];
 }>;
 const base = import.meta.env.BASE_URL;
 
@@ -46,7 +47,7 @@ const others = products.filter(p => p.id !== 'brokerage');
       </h1>
 
       <p class="text-lg text-gray-400 mb-10 max-w-xl leading-relaxed">
-        Equipment and material brokerage, hot shot runs, and dependable weekend freight for businesses, contractors, and local customers on the Silver Trail.
+        Equipment and material brokerage sourced across Western Canada, hot shot runs, and scheduled freight on the Mayo–Whitehorse and Dawson City–Mayo corridors.
       </p>
 
       <div class="flex flex-col sm:flex-row gap-3">
@@ -69,9 +70,9 @@ const others = products.filter(p => p.id !== 'brokerage');
       <div class="mt-14 pt-10 border-t border-brand-teal-mid/50 grid grid-cols-2 sm:grid-cols-4 gap-6">
         {[
           { value: "Mayo", label: "Based Here" },
-          { value: "Whitehorse", label: "Supply Hub" },
+          { value: "YT & BC & AB", label: "Sourcing Reach" },
           { value: "3", label: "Service Offerings" },
-          { value: "~400 km", label: "Route Length" },
+          { value: "2 Routes", label: "Freight Corridors" },
         ].map(stat => (
           <div>
             <div class="font-display font-700 text-white text-lg">{stat.value}</div>
