@@ -34,46 +34,49 @@ const others = products.filter(p => p.id !== 'brokerage');
         loading="eager"
         fetchpriority="high"
       />
-      <!-- Dark navy overlay for text readability -->
-      <div class="absolute inset-0 bg-brand-navy/78"></div>
+      <!-- Dark overlay — lighter so photo reads through -->
+      <div class="absolute inset-0 bg-brand-navy/50"></div>
       <!-- Gradient fade at bottom -->
       <div class="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t from-brand-navy to-transparent"></div>
     </div>
 
     <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <!-- Label -->
-      <div class="flex items-center gap-3 mb-7">
-        <span class="block w-8 h-px bg-brand-cyan"></span>
-        <span class="label-tag">Mayo-based freight — Yukon</span>
-      </div>
+      <!-- Text card -->
+      <div class="inline-block bg-brand-navy/70 backdrop-blur-sm rounded-md px-8 py-8 border border-white/10 max-w-2xl mb-14">
+        <!-- Label -->
+        <div class="flex items-center gap-3 mb-6">
+          <span class="block w-8 h-px bg-brand-cyan"></span>
+          <span class="label-tag">Mayo-based freight — Yukon</span>
+        </div>
 
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-800 text-white mb-6 leading-none tracking-tight max-w-3xl">
-        Freight & Supply Services<br/>
-        <span style="color: var(--cyan);">Mayo ↔ Whitehorse</span>
-      </h1>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-800 text-white mb-5 leading-none tracking-tight">
+          Freight & Supply Services<br/>
+          <span style="color: var(--cyan);">Mayo ↔ Whitehorse</span>
+        </h1>
 
-      <p class="text-lg text-gray-300 mb-10 max-w-xl leading-relaxed">
-        Equipment and material brokerage sourced across Western Canada, hot shot runs, and scheduled freight on the Mayo–Whitehorse and Dawson City–Mayo corridors.
-      </p>
+        <p class="text-lg text-gray-200 mb-8 leading-relaxed">
+          Equipment and material brokerage sourced across Western Canada, hot shot runs, and scheduled freight on the Mayo–Whitehorse and Dawson City–Mayo corridors.
+        </p>
 
-      <div class="flex flex-col sm:flex-row gap-3">
-        <a
-          href={`${base}contact/`}
-          class="inline-flex items-center justify-center bg-brand-orange text-white px-7 py-3.5 rounded font-semibold text-base hover:bg-brand-orange-dk transition-colors"
-        >
-          Request a Quote
-          <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-        </a>
-        <a
-          href={`${base}faq/`}
-          class="inline-flex items-center justify-center border border-brand-teal-mid text-gray-300 px-7 py-3.5 rounded font-medium text-base hover:border-brand-cyan/40 hover:text-white transition-colors"
-        >
-          Common Questions
-        </a>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <a
+            href={`${base}contact/`}
+            class="inline-flex items-center justify-center bg-brand-orange text-white px-7 py-3.5 rounded font-semibold text-base hover:bg-brand-orange-dk transition-colors"
+          >
+            Request a Quote
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+          <a
+            href={`${base}faq/`}
+            class="inline-flex items-center justify-center border border-white/30 text-gray-200 px-7 py-3.5 rounded font-medium text-base hover:bg-white/10 hover:text-white transition-colors"
+          >
+            Common Questions
+          </a>
+        </div>
       </div>
 
       <!-- Route stats bar -->
-      <div class="mt-14 pt-10 border-t border-brand-teal-mid/50 grid grid-cols-2 sm:grid-cols-4 gap-6">
+      <div class="pt-10 border-t border-white/20 grid grid-cols-2 sm:grid-cols-4 gap-6">
         {[
           { value: "Mayo", label: "Based Here" },
           { value: "YT & BC & AB", label: "Sourcing Reach" },
