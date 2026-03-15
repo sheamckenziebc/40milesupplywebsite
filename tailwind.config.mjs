@@ -5,11 +5,11 @@ export default {
     extend: {
       colors: {
         brand: {
-          navy:        '#1E2B38',
-          'navy-mid':  '#253444',
-          teal:        '#1E3220',
-          'teal-dark': '#142418',
-          'teal-mid':  '#1A2C1C',
+          navy:        '#1A2535',
+          'navy-mid':  '#202E42',
+          teal:        '#243548',
+          'teal-dark': '#141E2C',
+          'teal-mid':  '#1C2A3C',
           cyan:        '#D4921C',
           'cyan-dim':  '#B07A18',
           orange:      '#C4521A',
@@ -18,8 +18,8 @@ export default {
         },
       },
       fontFamily: {
-        sans:    ['"Source Sans 3"', 'system-ui', 'sans-serif'],
-        display: ['Oswald', 'system-ui', 'sans-serif'],
+        sans:    ['Lora', 'Georgia', 'serif'],
+        display: ['"Playfair Display"', 'Georgia', 'serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',

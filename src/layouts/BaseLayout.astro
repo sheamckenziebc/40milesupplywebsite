@@ -74,10 +74,10 @@ const jsonLd = JSON.stringify(jsonLdObj);
   <link rel="icon" type="image/png" href={`${base}favicon.png`} />
   <meta name="generator" content={Astro.generator} />
 
-  <!-- Fonts: Oswald (display) + Source Sans 3 (body) -->
+  <!-- Fonts: Playfair Display (headings) + Lora (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
 
   <!-- SEO -->
   <title>{fullTitle}</title>
@@ -108,11 +108,11 @@ const jsonLd = JSON.stringify(jsonLdObj);
   <style is:global>
     /* ── Design tokens ──────────────────────────────── */
     :root {
-      --navy:      #1E2B38;
-      --navy-mid:  #253444;
-      --teal:      #1E3220;
-      --teal-dark: #142418;
-      --teal-mid:  #1A2C1C;
+      --navy:      #1A2535;
+      --navy-mid:  #202E42;
+      --teal:      #243548;
+      --teal-dark: #141E2C;
+      --teal-mid:  #1C2A3C;
       --cyan:      #D4921C;
       --cyan-dim:  #B07A18;
       --orange:    #C4521A;
@@ -124,7 +124,7 @@ const jsonLd = JSON.stringify(jsonLdObj);
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Source Sans 3', system-ui, sans-serif;
+      font-family: 'Lora', Georgia, serif;
       line-height: 1.65;
       color: #1E1C18;
       margin: 0;
@@ -135,9 +135,9 @@ const jsonLd = JSON.stringify(jsonLdObj);
     }
 
     h1, h2, h3, h4, h5, h6 {
-      font-family: 'Oswald', system-ui, sans-serif;
+      font-family: 'Playfair Display', Georgia, serif;
       line-height: 1.15;
-      letter-spacing: 0.01em;
+      letter-spacing: -0.01em;
     }
 
     /* ── Skip link ──────────────────────────────────── */
@@ -258,8 +258,8 @@ const jsonLd = JSON.stringify(jsonLdObj);
     /* ── Label utility ──────────────────────────────── */
     .label-tag {
       display: inline-block;
-      font-family: 'Oswald', system-ui, sans-serif;
-      font-size: 0.72rem;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 0.7rem;
       font-weight: 700;
       letter-spacing: 0.12em;
       text-transform: uppercase;
