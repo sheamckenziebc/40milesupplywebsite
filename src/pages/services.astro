@@ -16,9 +16,9 @@ const products = yaml.load(readFileSync(productsPath, 'utf8')) as Array<{
 }>;
 const base = import.meta.env.BASE_URL;
 
-const brokerage = products.find(p => p.id === 'brokerage')!;
-const hotshot   = products.find(p => p.id === 'hotshot')!;
-const freight   = products.find(p => p.id === 'freight')!;
+const brokerage  = products.find(p => p.id === 'brokerage')!;
+const expediting = products.find(p => p.id === 'expediting')!;
+const hotshot    = products.find(p => p.id === 'hotshot')!;
 
 const advantages = [
   {
@@ -45,13 +45,13 @@ const valuePoints = [
   "Independent inspections before final purchase decisions",
   "Less time chasing weak or misleading listings",
   "Practical sourcing with Yukon use and value in mind",
-  "Support from discovery through to landed asset",
+  "Support from discovery through to landed asset in Mayo",
 ];
 ---
 
 <BaseLayout
   title={`Services | ${config.site.title}`}
-  description="40 Mile Supply helps Yukon buyers source equipment with better market coverage, less risk, and less wasted time. Hot Shot and Regular Freight on the Mayo–Whitehorse and Dawson City–Mayo corridors."
+  description="40 Mile Supply offers equipment and material brokerage sourced across Western Canada, scheduled weekend expediting on the Mayo–Whitehorse and Dawson City–Mayo corridors, and hot shot priority dispatch. Mayo, Yukon expediting company on the Silver Trail."
 >
   <Header slot="header" />
 
@@ -60,7 +60,7 @@ const valuePoints = [
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <span class="cyan-rule"></span>
       <h1 class="font-display font-700 text-3xl md:text-4xl text-white mb-2">Our Services</h1>
-      <p class="text-gray-400 max-w-xl">Equipment brokerage with real market reach, urgent hot shot runs, and dependable scheduled freight — operated from Mayo, Yukon.</p>
+      <p class="text-gray-400 max-w-xl">Equipment brokerage with real market reach, scheduled weekend expediting runs, and hot shot priority dispatch — operated from Mayo on the Silver Trail.</p>
     </div>
   </div>
 
@@ -68,17 +68,9 @@ const valuePoints = [
   <!-- BROKERAGE                                           -->
   <!-- ═══════════════════════════════════════════════════ -->
 
-  <!-- Flagship intro card -->
   <section class="pt-16 pb-0 bg-white">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="animate-on-scroll border-2 border-brand-cyan/60 rounded-md overflow-hidden">
-        <div class="bg-brand-cyan px-6 py-2 flex items-center gap-2">
-          <svg class="w-4 h-4 text-brand-navy flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-          </svg>
-          <span class="text-brand-navy text-xs font-bold uppercase tracking-widest">Flagship Service</span>
-        </div>
-
+      <div class="animate-on-scroll border border-brand-cyan/40 rounded-md overflow-hidden">
         <div class="bg-brand-navy p-8 md:p-10">
           <div class="grid grid-cols-1 lg:grid-cols-5 gap-10">
             <div class="lg:col-span-3">
@@ -98,7 +90,7 @@ const valuePoints = [
                 Buying trucks, trailers, tools, and equipment from outside the Yukon is not just about finding a listing. It is about reducing risk, saving time, and making sure the right unit is worth bringing north in the first place. That is where we add value.
               </p>
               <p class="text-gray-400 leading-relaxed mb-6">
-                Our service is built around three core advantages: market coverage, trusted sourcing, and disciplined decision-making — coordinating the full process from listing discovery through to landed asset.
+                Our service is built around three core advantages: market coverage, trusted sourcing, and disciplined decision-making — coordinating the full process from listing discovery through to landed asset in Mayo.
               </p>
 
               <!-- Sourcing markets -->
@@ -192,27 +184,41 @@ const valuePoints = [
   <div class="h-px bg-gradient-to-r from-transparent via-brand-cyan/20 to-transparent"></div>
 
   <!-- ═══════════════════════════════════════════════════ -->
-  <!-- FREIGHT SERVICES                                    -->
+  <!-- EXPEDITING & HOT SHOT                              -->
   <!-- ═══════════════════════════════════════════════════ -->
   <section class="py-16 bg-white">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="mb-10 animate-on-scroll">
         <span class="cyan-rule"></span>
-        <h2 class="text-2xl md:text-3xl font-display font-700 text-gray-900 mb-2">Freight Services</h2>
-        <p class="text-gray-500">Scheduled runs and urgent delivery across the region.</p>
+        <h2 class="text-2xl md:text-3xl font-display font-700 text-gray-900 mb-2">Expediting & Hot Shot</h2>
+        <p class="text-gray-500 max-w-xl">Two levels of service for the same corridors — the difference is timing and priority.</p>
+      </div>
+
+      <!-- Expediting vs Hot Shot distinction callout -->
+      <div class="mb-8 animate-on-scroll bg-brand-navy border border-brand-teal-mid rounded-md p-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 divide-y md:divide-y-0 md:divide-x divide-brand-teal-mid/50">
+          <div class="pb-6 md:pb-0 md:pr-6">
+            <p class="text-xs text-brand-cyan uppercase tracking-widest font-semibold mb-2">Expediting</p>
+            <p class="text-gray-300 text-sm leading-relaxed">Your standing supply run. Scheduled weekend service with discounted weekend rates — mine supply runs, camp resupply, contractor materials, store orders. Reliable, predictable, and built for repeat freight. Sub-contracting available for other expediters who need weekend coverage.</p>
+          </div>
+          <div class="pt-6 md:pt-0 md:pl-6">
+            <p class="text-xs text-brand-cyan uppercase tracking-widest font-semibold mb-2">Hot Shot</p>
+            <p class="text-gray-300 text-sm leading-relaxed">The emergency call. When a project is held up and a part is needed now — outside the regular schedule, dispatched as fast as possible. Hot shot is the exception, not the routine. Premium availability, premium rate. When you can't wait for the weekend.</p>
+          </div>
+        </div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 stagger-children">
         {[
           {
-            service: hotshot,
-            icon: "M13 10V3L4 14h7v7l9-11h-7z",
-            note: "Contact us to confirm availability. Pricing depends on load, route, and timing."
+            service: expediting,
+            icon: "M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0",
+            note: "Discounted weekend rates. Weekday service available by special arrangement. Quote-based pricing."
           },
           {
-            service: freight,
-            icon: "M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0",
-            note: "Regular schedule with custom arrangements available. Quote-based pricing."
+            service: hotshot,
+            icon: "M13 10V3L4 14h7v7l9-11h-7z",
+            note: "Contact us to confirm availability. Pricing depends on load, route, and timing. Priority dispatch — not a scheduled run."
           }
         ].map(({ service, icon, note }) => (
           <div class="animate-on-scroll card-hover bg-brand-navy border border-brand-teal-mid rounded-md p-7 flex flex-col">
@@ -253,6 +259,21 @@ const valuePoints = [
             </div>
           </div>
         ))}
+      </div>
+
+      <!-- Sub-contracting callout -->
+      <div class="mt-8 animate-on-scroll border border-brand-teal-mid/60 rounded-md p-6 bg-brand-surface">
+        <div class="flex items-start gap-4">
+          <div class="w-10 h-10 bg-brand-navy rounded flex items-center justify-center flex-shrink-0 mt-0.5">
+            <svg class="w-5 h-5 text-brand-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-display font-700 text-gray-900 text-base mb-1">Sub-Contracting Available</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">Other expediters in the region can sub-contract weekend runs to us. If you need weekend coverage on the Silver Trail corridor and don't want to run it yourself, reach out. We're on the road anyway.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>

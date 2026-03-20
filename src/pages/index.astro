@@ -17,7 +17,9 @@ const products = yaml.load(readFileSync(productsPath, 'utf8')) as Array<{
 const base = import.meta.env.BASE_URL;
 
 const brokerage = products.find(p => p.id === 'brokerage')!;
-const others = products.filter(p => p.id !== 'brokerage');
+const others = products.filter(p => p.id !== 'brokerage').sort((a, b) =>
+  a.id === 'expediting' ? -1 : b.id === 'expediting' ? 1 : 0
+);
 ---
 
 <BaseLayout title={config.site.title} description={config.site.description}>
@@ -55,7 +57,7 @@ const others = products.filter(p => p.id !== 'brokerage');
         </h1>
 
         <p class="text-lg text-gray-200 mb-8 leading-relaxed">
-          Equipment and material brokerage sourced across Western Canada, hot shot runs, and scheduled freight on the Mayo–Whitehorse and Dawson City–Mayo corridors.
+          Equipment and material brokerage sourced across Western Canada. Scheduled weekend expediting runs and hot shot priority dispatch on the Mayo–Whitehorse and Dawson City–Mayo corridors. We work the weekends so you don't have to.
         </p>
 
         <div class="flex flex-col sm:flex-row gap-3">
@@ -78,10 +80,10 @@ const others = products.filter(p => p.id !== 'brokerage');
       <!-- Route stats bar -->
       <div class="pt-10 border-t border-white/20 grid grid-cols-2 sm:grid-cols-4 gap-6">
         {[
-          { value: "Mayo", label: "Based Here" },
-          { value: "YT & BC & AB", label: "Sourcing Reach" },
-          { value: "3", label: "Service Offerings" },
-          { value: "2 Routes", label: "Freight Corridors" },
+          { value: "Mayo, YT", label: "Based Here" },
+          { value: "YT · BC · AB", label: "Sourcing Reach" },
+          { value: "Weekends", label: "Expediting Schedule" },
+          { value: "2 Corridors", label: "Silver Trail & Beyond" },
         ].map(stat => (
           <div>
             <div class="font-display font-700 text-white text-lg">{stat.value}</div>
@@ -102,18 +104,12 @@ const others = products.filter(p => p.id !== 'brokerage');
         <span class="cyan-rule"></span>
         <h2 class="text-3xl md:text-4xl font-display font-700 text-gray-900 mb-3">What We Do</h2>
         <p class="text-gray-500 max-w-xl">
-          Three focused services for the Mayo–Whitehorse corridor.
+          Brokerage, expediting, and hot shot — operated from Mayo on the Silver Trail.
         </p>
       </div>
 
-      <!-- Featured: Brokerage -->
-      <div class="animate-on-scroll mb-6 border-2 border-brand-cyan/50 rounded-md overflow-hidden">
-        <div class="bg-brand-cyan px-5 py-1.5 flex items-center gap-2">
-          <svg class="w-3.5 h-3.5 text-brand-navy flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-          </svg>
-          <span class="text-brand-navy text-xs font-bold uppercase tracking-widest">Flagship Service</span>
-        </div>
+      <!-- Brokerage — first in list -->
+      <div class="animate-on-scroll mb-6 border border-brand-cyan/40 rounded-md overflow-hidden">
         <div class="bg-brand-navy p-7 md:p-8 flex flex-col md:flex-row gap-8">
           <div class="flex-1">
             <div class="card-icon w-11 h-11 bg-brand-teal rounded flex items-center justify-center mb-4 flex-shrink-0">
@@ -204,10 +200,10 @@ const others = products.filter(p => p.id !== 'brokerage');
 
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8 stagger-children">
         {[
-          { n: "01", title: "Request a Quote", body: "Tell us what you need to move, when, and where. We respond with clear next steps." },
-          { n: "02", title: "Confirm Details", body: "We confirm pickup, contact, and any instructions so the run goes smoothly." },
-          { n: "03", title: "Weekend Run", body: "Freight moves on our scheduled weekend route between Mayo and Whitehorse." },
-          { n: "04", title: "Delivery", body: "Delivered to your chosen location. Straightforward and done." },
+          { n: "01", title: "Request a Quote", body: "Tell us what you need moved, sourced, or expedited. We respond with clear next steps and pricing." },
+          { n: "02", title: "Confirm Details", body: "We confirm pickup, contacts, and any instructions — brokerage, expediting, or hot shot — so the run goes smoothly." },
+          { n: "03", title: "We Work the Weekend", body: "Freight moves on our scheduled weekend runs. Hot shot calls dispatched as quickly as possible." },
+          { n: "04", title: "Delivered", body: "To your site, camp, or door on the Silver Trail and beyond. Straightforward and done." },
         ].map((step, i) => (
           <div class="animate-on-scroll relative">
             <!-- Connector line (not last) -->
@@ -235,9 +231,9 @@ const others = products.filter(p => p.id !== 'brokerage');
     <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
         <div>
-          <span class="label-tag mb-3 block">Ready to move freight?</span>
+          <span class="label-tag mb-3 block">Mayo-based Expediting — Silver Trail</span>
           <h2 class="text-3xl md:text-4xl font-display font-700 text-white leading-tight">
-            Mayo to Whitehorse,<br/>on a schedule you can plan around.
+            We work the weekends<br/>so you don't have to.
           </h2>
         </div>
         <div class="flex flex-col sm:flex-row lg:flex-col gap-3 flex-shrink-0">
@@ -245,7 +241,7 @@ const others = products.filter(p => p.id !== 'brokerage');
             href={`${base}contact/`}
             class="inline-flex items-center justify-center bg-brand-orange text-white px-7 py-3.5 rounded font-semibold hover:bg-brand-orange-dk transition-colors whitespace-nowrap"
           >
-            Get a Freight Quote
+            Get a Quote
           </a>
           <a
             href={`tel:${config.contact.phone}`}

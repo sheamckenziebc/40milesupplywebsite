@@ -1,10 +1,10 @@
 - id: "brokerage"
   name: "Equipment & Material Brokerage"
   tagline: "Better market coverage, less risk, less wasted time."
-  description: "We help Yukon buyers source equipment with better market coverage, less risk, and less wasted time. Automated listing coverage so strong opportunities are not missed, a trusted network of vendors and dealers, and independent inspections before final decisions are made — from discovery through to landed asset."
+  description: "We help Yukon buyers source equipment and materials with better market coverage, less risk, and less wasted time. Automated listing coverage so strong opportunities are not missed, a trusted network of vendors and dealers, and independent inspections before final decisions are made — from discovery through to landed asset in Mayo."
   price: "Request Quote"
   category: "services"
-  featured: true
+  featured: false
   markets:
     - "Whitehorse"
     - "Vancouver"
@@ -16,38 +16,38 @@
     - "Sourcing across Western Canada — local to Vancouver"
     - "Specialized equipment from wherever the right supplier is"
     - "Vendor coordination and communication handled for you"
-    - "Delivery to Mayo via scheduled run or hot shot"
+    - "Delivery to Mayo via expediting run or hot shot"
 
-- id: "hotshot"
-  name: "Hot Shot"
-  tagline: "Urgent freight, when the schedule can't wait"
-  description: "Time-sensitive freight outside the regular schedule. We run Mayo to Whitehorse and Dawson City to Mayo, and can arrange custom routes for critical freight needs. When a project is held up or a part is needed — Hot Shot gets it moving."
-  price: "Contact for Availability"
-  category: "services"
-  featured: false
-  routes:
-    - "Mayo \u2194 Whitehorse"
-    - "Dawson City \u2194 Mayo"
-    - "Custom Routes"
-  features:
-    - "Mayo to Whitehorse urgent runs"
-    - "Dawson City to Mayo route"
-    - "Custom routes for critical freight"
-    - "Contact us to confirm availability and pricing"
-
-- id: "freight"
-  name: "Regular Freight"
-  tagline: "Dependable scheduled runs across the region"
-  description: "Reliable scheduled freight for businesses, contractors, and local customers. We run Mayo to Whitehorse and Dawson City to Mayo on a regular schedule, with custom freight arrangements available for loads that don't fit the standard run."
+- id: "expediting"
+  name: "Expediting"
+  tagline: "We work the weekends so you don't have to."
+  description: "Scheduled weekend supply runs on the Mayo–Whitehorse and Dawson City–Mayo corridors. Mine supply runs, store orders, contractor materials, camp resupply — we are on the road every weekend at discounted weekend rates. We also sub-contract to other expediters who need weekend coverage. Weekday service is available by special arrangement."
   price: "Request Quote"
   category: "services"
   featured: false
   routes:
-    - "Mayo \u2194 Whitehorse"
-    - "Dawson City \u2194 Mayo"
+    - "Mayo ↔ Whitehorse"
+    - "Dawson City ↔ Mayo"
     - "Custom Arrangements"
   features:
-    - "Mayo to Whitehorse scheduled runs"
-    - "Dawson City to Mayo route"
-    - "Custom freight arrangements available"
-    - "Recurring and one-off shipments"
+    - "Discounted weekend rates — scheduled and reliable"
+    - "Mine supply runs, camp resupply, contractor freight"
+    - "Sub-contracting available for other expediters"
+    - "Weekday service available by special arrangement"
+
+- id: "hotshot"
+  name: "Hot Shot"
+  tagline: "Priority dispatch when the schedule can't wait."
+  description: "When a project is held up and a part or load is needed now — Hot Shot is the call. Urgent, on-demand priority runs outside the regular schedule. Where expediting is your standing weekly supply run, Hot Shot is the emergency. We dispatch as quickly as possible on the Mayo–Whitehorse and Dawson City–Mayo corridors, and can arrange custom routes for critical freight."
+  price: "Contact for Availability"
+  category: "services"
+  featured: false
+  routes:
+    - "Mayo ↔ Whitehorse"
+    - "Dawson City ↔ Mayo"
+    - "Custom Routes"
+  features:
+    - "Urgent priority dispatch — outside the regular schedule"
+    - "Mayo to Whitehorse and Dawson City to Mayo"
+    - "Custom routes for critical freight needs"
+    - "Contact us to confirm availability and pricing"

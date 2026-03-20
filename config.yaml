@@ -1,9 +1,9 @@
 # 40 Mile Supply - Configuration
-# Mayo-based freight service: weekend runs between Mayo and Whitehorse
+# Mayo-based expediting and brokerage: weekend runs on the Silver Trail corridor
 
 site:
   title: "40 Mile Supply"
-  description: "40 Mile Supply is a Mayo, Yukon freight and logistics company. We offer equipment and material brokerage sourced across Western Canada, hot shot runs, and scheduled freight on the Mayo–Whitehorse and Dawson City–Mayo corridors."
+  description: "40 Mile Supply is a Mayo, Yukon expediting and brokerage company. We offer equipment and material brokerage sourced across Western Canada, scheduled weekend expediting runs on the Mayo–Whitehorse and Dawson City–Mayo corridors, and hot shot priority dispatch. We work the weekends so you don't have to."
   url: "https://40milesupply.ca"
   author: "Shea McKenzie"
 
@@ -19,7 +19,7 @@ contact:
   email: ""
   phone: "778-700-9221"
   address: "Mayo, Yukon, Canada"
-  businessHours: "Weekend freight runs by schedule | Quote requests by phone or form"
+  businessHours: "Weekend runs by schedule | Weekday by arrangement"
 
 social:
   facebook: ""
@@ -46,15 +46,20 @@ integrations:
 
 seo:
   keywords:
-    - "Mayo Yukon freight"
-    - "Whitehorse freight"
-    - "Mayo to Whitehorse delivery"
-    - "weekend freight Yukon"
-    - "Silver Trail logistics"
-    - "Mayo supply runs"
-    - "Yukon contractor freight"
-    - "Whitehorse pickup service"
-    - "local freight Mayo"
+    - "Mayo Yukon expediting"
+    - "expediting company Mayo Yukon"
+    - "Silver Trail expediting"
+    - "Yukon expediting services"
+    - "mine supply runs Yukon"
+    - "Keno Hill supply delivery"
+    - "Mayo Whitehorse freight"
+    - "weekend expediting runs Yukon"
+    - "hot shot Yukon"
+    - "mining supply chain Yukon"
+    - "camp resupply Silver Trail"
+    - "sub-contracting expediting Yukon"
+    - "equipment brokerage Yukon"
+    - "Dawson City Mayo freight"
     - "40 Mile Supply"
   og_image: "/assets/og-image.svg"
   twitter_card: "summary_large_image"

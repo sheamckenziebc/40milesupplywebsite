@@ -12,32 +12,36 @@ const base = import.meta.env.BASE_URL;
 
 const faqs = [
   {
-    question: "What routes do you run?",
-    answer: "Our regular scheduled freight runs cover Mayo to Whitehorse and Dawson City to Mayo. Hot shot runs are available on both corridors and can be arranged on custom routes when the freight is time-sensitive enough to warrant it. Contact us to discuss your specific route needs."
+    question: "What is expediting, and how is it different from hot shot?",
+    answer: "In the Yukon, expediting is the standing supply run — scheduled, reliable, and built for repeat freight. We run the Mayo–Whitehorse and Dawson City–Mayo corridors on weekends at discounted weekend rates. Mine supply runs, camp resupply, contractor materials, store orders — if it moves regularly, expediting is the right service. Hot shot is the emergency. When a project is held up and a part is needed now, outside the regular schedule — that's hot shot. Priority dispatch, premium rate, no waiting for the weekend."
   },
   {
-    question: "What kinds of freight do you handle?",
-    answer: "We handle general commercial freight: supplies, store orders, contractor materials, tools, equipment, and operational goods for businesses, organizations, and local customers. We do not offer same-day courier or full-service moving. If you're unsure whether your shipment fits, ask before booking."
+    question: "When do you run? Do you run weekdays?",
+    answer: "Our scheduled expediting runs are on weekends — we work the weekends so you don't have to. Discounted weekend rates apply to scheduled runs. Weekday service is available by special arrangement. Hot shot calls can be fielded any time depending on availability — contact us directly for urgent requests."
   },
   {
     question: "What is Equipment & Material Brokerage?",
-    answer: "Brokerage is our flagship service. We source and coordinate equipment and materials from suppliers across Western Canada — Whitehorse, Vancouver, Edmonton, Calgary, Grande Prairie, and wherever the right supplier for specialized equipment happens to be. We handle vendor communication, pickup coordination, and delivery to Mayo. You don't need to make the trip or track down suppliers yourself."
+    answer: "We source and coordinate equipment and materials from suppliers across Western Canada — Whitehorse, Vancouver, Edmonton, Calgary, Grande Prairie, and wherever the right supplier happens to be. We handle vendor communication, pickup coordination, and delivery to Mayo. Automated listing monitoring, a trusted vendor network, and independent inspections before purchase decisions. You don't need to make the trip or track down suppliers yourself."
+  },
+  {
+    question: "Do you sub-contract to other expediters?",
+    answer: "Yes. If you're an expediting company that needs weekend coverage on the Silver Trail corridor, we're available to sub-contract. We're on the road anyway — reach out and we can work out an arrangement."
+  },
+  {
+    question: "What kinds of freight do you handle?",
+    answer: "We handle general commercial freight: mine and camp supplies, store orders, contractor materials, tools, equipment, and operational goods for businesses, organizations, and local customers. If you're unsure whether your shipment fits, ask before booking."
   },
   {
     question: "How do I get a quote?",
-    answer: "Use our contact form or call/email. Tell us what you need to move, pickup and delivery locations, and preferred timing. We'll respond with next steps and a quote. No obligation."
+    answer: "Use our contact form or call us. Tell us what you need — freight to move, equipment to source, or an urgent hot shot request. Include pickup and delivery locations and preferred timing. We'll respond with next steps and a quote. No obligation."
+  },
+  {
+    question: "Where are you based, and what routes do you cover?",
+    answer: "We are based in Mayo, Yukon — on the Silver Trail. Our expediting and hot shot routes cover Mayo–Whitehorse and Dawson City–Mayo, with custom routes available for the right freight. Our brokerage sourcing network reaches across Western Canada — Vancouver, Edmonton, Calgary, Grande Prairie, and beyond — to get you what you need regardless of where it comes from."
   },
   {
     question: "Do you offer recurring service?",
-    answer: "Yes. We can coordinate recurring runs for business restock, project freight, or other regular needs. Contact us to discuss schedule and pricing."
-  },
-  {
-    question: "Do you transport dangerous goods or restricted items?",
-    answer: "Not at launch unless explicitly approved and handled in full compliance with applicable regulations. If you are unsure whether your shipment falls into this category, ask before booking."
-  },
-  {
-    question: "Where are you based?",
-    answer: "We are based in Mayo, Yukon. Our freight routes cover Mayo–Whitehorse and Dawson City–Mayo. Our brokerage sourcing network extends across Western Canada — including Vancouver, Edmonton, Calgary, and Grande Prairie — to get you what you need regardless of where it comes from."
+    answer: "Yes. Mine supply runs, camp resupply, and standing freight arrangements are a core part of what expediting means. Contact us to discuss a regular schedule and pricing."
   }
 ];
 
@@ -53,7 +57,7 @@ faqObj["@type"] = "FAQPage";
 const faqJsonLd = JSON.stringify(faqObj);
 ---
 
-<BaseLayout title={`FAQ | ${config.site.title}`} description="Frequently asked questions about 40 Mile Supply freight services, weekend runs, Whitehorse pickups, quotes, and the Mayo–Whitehorse route.">
+<BaseLayout title={`FAQ | ${config.site.title}`} description="Frequently asked questions about 40 Mile Supply expediting services, weekend runs, hot shot dispatch, sub-contracting, and brokerage on the Silver Trail — Mayo, Yukon.">
   <Header slot="header" />
 
   <!-- Page header band -->
@@ -61,7 +65,7 @@ const faqJsonLd = JSON.stringify(faqObj);
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       <span class="cyan-rule"></span>
       <h1 class="font-display font-700 text-3xl md:text-4xl text-white mb-2">Frequently Asked Questions</h1>
-      <p class="text-gray-400">Straight answers about our freight services and the Mayo–Whitehorse route.</p>
+      <p class="text-gray-400">Straight answers about expediting, hot shot, brokerage, and the Silver Trail.</p>
     </div>
   </div>
 
