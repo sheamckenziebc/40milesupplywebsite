@@ -21,7 +21,7 @@
 - id: "expediting"
   name: "Expediting"
   tagline: "We work the weekends so you don't have to."
-  description: "Scheduled weekend supply runs on the Mayo–Whitehorse and Dawson City–Mayo corridors. Mine supply runs, store orders, contractor materials, camp resupply — we are on the road every weekend at discounted weekend rates. We also sub-contract to other expediters who need weekend coverage. Weekday service is available by special arrangement."
+  description: "Scheduled weekend runs on the Mayo–Whitehorse and Dawson City–Mayo corridors. Discounted weekend rates on mine supply, camp resupply, contractor freight, and store orders. Sub-contracting available. Weekday by arrangement."
   price: "Request Quote"
   category: "services"
   featured: false
@@ -38,7 +38,7 @@
 - id: "hotshot"
   name: "Hot Shot"
   tagline: "Priority dispatch when the schedule can't wait."
-  description: "When a project is held up and a part or load is needed now — Hot Shot is the call. Urgent, on-demand priority runs outside the regular schedule. Where expediting is your standing weekly supply run, Hot Shot is the emergency. We dispatch as quickly as possible on the Mayo–Whitehorse and Dawson City–Mayo corridors, and can arrange custom routes for critical freight."
+  description: "On-demand priority runs outside the regular schedule. When the operation can't wait for the weekend — we dispatch as quickly as possible on the Mayo–Whitehorse and Dawson City–Mayo corridors. Custom routes available for critical loads."
   price: "Contact for Availability"
   category: "services"
   featured: false
