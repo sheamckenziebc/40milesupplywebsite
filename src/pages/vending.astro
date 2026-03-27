@@ -1,0 +1,263 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { readFileSync } from 'fs';
+import { join } from 'path';
+import yaml from 'js-yaml';
+
+const configPath = join(process.cwd(), 'config.yaml');
+const config = yaml.load(readFileSync(configPath, 'utf8'));
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout
+  title={`Vending | ${config.site.title}`}
+  description="40 Mile Supply places and services vending machines at mine sites, First Nations buildings, and community facilities on the Silver Trail. Free placement, regular restocking, local operator."
+>
+  <Header slot="header" />
+
+  <!-- Page header band -->
+  <div class="bg-brand-navy border-b border-brand-teal-mid/50 py-12">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <span class="cyan-rule"></span>
+      <h1 class="font-display font-700 text-3xl md:text-4xl text-white mb-2">Vending Placement</h1>
+      <p class="text-gray-400 max-w-xl">Machines placed, stocked, and serviced by a Mayo-based operator — already running the corridor every weekend.</p>
+    </div>
+  </div>
+
+  <!-- Intro + who we're targeting -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-12">
+
+        <!-- Left: overview -->
+        <div class="lg:col-span-3 animate-on-scroll">
+          <span class="cyan-rule"></span>
+          <h2 class="font-display font-700 text-2xl md:text-3xl text-gray-900 mb-5">What We Offer</h2>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            We're placing vending machines at facilities along the Silver Trail corridor. Machines are owned and operated by us — no cost to the host. We handle stocking, maintenance, and servicing on our regular weekend schedule, with product selection tailored to the location.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-8">
+            Being based in Mayo means we're already on the road. No waiting on a Whitehorse operator to make a special trip — restocking happens on the same run as everything else.
+          </p>
+
+          <!-- What hosts get -->
+          <div class="space-y-4">
+            {[
+              {
+                icon: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
+                title: "No cost to the host",
+                body: "Machines are placed free of charge. Commission arrangements available for high-volume locations — discussed during the inquiry process."
+              },
+              {
+                icon: "M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z",
+                title: "Regular restocking on the weekend run",
+                body: "We're already running the corridor. Restocking is built into the weekly schedule — not a special trip that gets delayed."
+              },
+              {
+                icon: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2",
+                title: "Product selection input",
+                body: "Hosts can request what goes in the machine. We stock accordingly — snacks, drinks, energy drinks, convenience items."
+              },
+              {
+                icon: "M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z M15 12a3 3 0 11-6 0 3 3 0 016 0z",
+                title: "Maintenance handled by us",
+                body: "All repairs, cleaning, and mechanical issues are our responsibility. The host has nothing to manage."
+              },
+            ].map(item => (
+              <div class="flex items-start gap-4">
+                <div class="w-9 h-9 bg-brand-navy rounded flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-4 h-4 text-brand-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d={item.icon} />
+                  </svg>
+                </div>
+                <div>
+                  <div class="font-display font-600 text-gray-900 text-sm mb-0.5">{item.title}</div>
+                  <p class="text-gray-500 text-sm leading-relaxed">{item.body}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Right: target locations -->
+        <div class="lg:col-span-2 animate-on-scroll">
+          <div class="bg-brand-navy border border-brand-teal-mid rounded-md p-7">
+            <h3 class="font-display font-700 text-white text-base mb-5 uppercase tracking-wide">Target Locations</h3>
+            <div class="space-y-5">
+              {[
+                {
+                  label: "Mine Sites & Camps",
+                  body: "Keno Hill and area operations. Crib rooms, dry facilities, break areas. High-turnover product mix — snacks, energy drinks, water, convenience items."
+                },
+                {
+                  label: "Na-Cho Nyak Dun Buildings",
+                  body: "Band administration, NNDDC facilities, and community buildings in Mayo. Stocked for an office environment with product selection input from staff."
+                },
+                {
+                  label: "Municipal & Federal Buildings",
+                  body: "Village of Mayo offices, federal facilities, and RCMP detachment. Product selection can be adjusted to meet any applicable nutrition or procurement guidelines."
+                },
+                {
+                  label: "Government of Yukon Facilities",
+                  body: "Inquiries from GY facilities are reviewed individually. Placement subject to applicable conflict of interest considerations."
+                },
+              ].map(loc => (
+                <div class="border-b border-brand-teal-mid/40 pb-5 last:border-0 last:pb-0">
+                  <div class="text-xs font-semibold text-brand-cyan uppercase tracking-wider mb-1">{loc.label}</div>
+                  <p class="text-gray-400 text-sm leading-relaxed">{loc.body}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Separator -->
+  <div class="h-px bg-gradient-to-r from-transparent via-brand-cyan/20 to-transparent"></div>
+
+  <!-- Inquiry form -->
+  <section class="py-16 bg-brand-surface">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="animate-on-scroll mb-10">
+        <span class="cyan-rule"></span>
+        <h2 class="font-display font-700 text-2xl md:text-3xl text-gray-900 mb-2">Placement Inquiry</h2>
+        <p class="text-gray-500">Interested in having a machine placed at your facility? Send us the details and we'll follow up.</p>
+      </div>
+
+      <form
+        action={`https://formspree.io/f/${config.integrations.formspree_id}`}
+        method="POST"
+        class="space-y-4 bg-white border border-gray-200 rounded-md p-8"
+        id="vending-form"
+      >
+        <!-- Hidden field to identify this as a vending inquiry -->
+        <input type="hidden" name="freight-type" value="vending-placement" />
+        <input type="hidden" name="_subject" value="Vending Placement Inquiry — 40 Mile Supply" />
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label for="v-name" class="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1.5">Contact Name *</label>
+            <input
+              type="text" id="v-name" name="name" required
+              autocomplete="name" placeholder="Your name"
+              class="w-full px-4 py-3 bg-white border border-gray-200 rounded text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-brand-cyan/30 focus:border-brand-cyan transition-colors"
+            />
+          </div>
+          <div>
+            <label for="v-org" class="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1.5">Organization *</label>
+            <input
+              type="text" id="v-org" name="business" required
+              placeholder="Organization or company name"
+              class="w-full px-4 py-3 bg-white border border-gray-200 rounded text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-brand-cyan/30 focus:border-brand-cyan transition-colors"
+            />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label for="v-phone" class="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1.5">Phone *</label>
+            <input
+              type="tel" id="v-phone" name="phone" required
+              autocomplete="tel" placeholder="Best number to reach you"
+              class="w-full px-4 py-3 bg-white border border-gray-200 rounded text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-brand-cyan/30 focus:border-brand-cyan transition-colors"
+            />
+          </div>
+          <div>
+            <label for="v-email" class="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1.5">Email</label>
+            <input
+              type="email" id="v-email" name="email"
+              autocomplete="email" placeholder="Optional"
+              class="w-full px-4 py-3 bg-white border border-gray-200 rounded text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-brand-cyan/30 focus:border-brand-cyan transition-colors"
+            />
+          </div>
+        </div>
+
+        <div>
+          <label for="v-location" class="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1.5">Facility / Location *</label>
+          <input
+            type="text" id="v-location" name="pickup" required
+            placeholder="Building name and location (e.g. Mayo Band Office, Keno Hill dry facility)"
+            class="w-full px-4 py-3 bg-white border border-gray-200 rounded text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-brand-cyan/30 focus:border-brand-cyan transition-colors"
+          />
+        </div>
+
+        <div>
+          <label for="v-traffic" class="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1.5">Approximate Daily Foot Traffic</label>
+          <select
+            id="v-traffic" name="delivery"
+            class="w-full px-4 py-3 bg-white border border-gray-200 rounded text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-brand-cyan/30 focus:border-brand-cyan transition-colors"
+          >
+            <option value="">Select a range...</option>
+            <option value="under-20">Under 20 people</option>
+            <option value="20-50">20–50 people</option>
+            <option value="50-100">50–100 people</option>
+            <option value="100-plus">100+ people</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="v-message" class="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1.5">Additional Details</label>
+          <textarea
+            id="v-message" name="message" rows="4"
+            placeholder="Anything useful — space available, product preferences, access considerations, existing vending setup, etc."
+            class="w-full px-4 py-3 bg-white border border-gray-200 rounded text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-brand-cyan/30 focus:border-brand-cyan transition-colors resize-none"
+          ></textarea>
+        </div>
+
+        <input type="text" name="_gotcha" style="display:none" />
+
+        <button
+          type="submit"
+          class="w-full bg-brand-orange text-white py-3.5 px-6 rounded font-semibold text-base hover:bg-brand-orange-dk focus:outline-none focus:ring-2 focus:ring-brand-cyan/40 focus:ring-offset-2 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          Submit Placement Inquiry
+        </button>
+        <p class="text-xs text-gray-400 text-center">We'll follow up by phone or email. No commitment required.</p>
+      </form>
+
+      <div id="vending-form-status" class="mt-4 p-4 rounded hidden" aria-live="polite" role="status">
+        <p id="vending-form-message"></p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const form = document.getElementById('vending-form') as HTMLFormElement;
+    const formStatus = document.getElementById('vending-form-status');
+    const formMessage = document.getElementById('vending-form-message');
+    const submitBtn = form?.querySelector('button[type="submit"]') as HTMLButtonElement;
+
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = '<svg class="animate-spin -ml-1 mr-2 h-5 w-5 text-white inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path></svg>Sending...';
+        }
+        const formData = new FormData(form);
+        try {
+          const response = await fetch(form.action, { method: 'POST', body: formData, headers: { 'Accept': 'application/json' } });
+          if (response.ok) {
+            formStatus!.className = 'mt-4 p-4 rounded bg-green-950 border border-green-800';
+            formMessage!.textContent = "Got it — we'll be in touch to discuss placement.";
+            formMessage!.className = 'text-green-300 text-sm font-medium';
+            form.reset();
+          } else { throw new Error(); }
+        } catch {
+          formStatus!.className = 'mt-4 p-4 rounded bg-red-950 border border-red-800';
+          formMessage!.textContent = 'Something went wrong. Please try again or call us.';
+          formMessage!.className = 'text-red-300 text-sm font-medium';
+        }
+        if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Submit Placement Inquiry'; }
+        formStatus!.classList.remove('hidden');
+      });
+    }
+  </script>
+
+  <Footer slot="footer" />
+</BaseLayout>

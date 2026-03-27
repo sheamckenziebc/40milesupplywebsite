@@ -82,6 +82,7 @@ function isActive(path: string) {
           {[
             { href: base, label: 'Home', active: isActive(base) },
             ...(config.features.products ? [{ href: `${base}services/`, label: 'Services', active: isActive(`${base}services/`) }] : []),
+            ...(config.features.vending ? [{ href: `${base}vending/`, label: 'Vending', active: isActive(`${base}vending/`) }] : []),
             ...(config.features.faq ? [{ href: `${base}faq/`, label: 'FAQ', active: isActive(`${base}faq/`) }] : []),
             { href: `${base}contact/`, label: 'Contact', active: isActive(`${base}contact/`) },
           ].map(item => (
@@ -142,6 +143,7 @@ function isActive(path: string) {
         {[
           { href: base, label: 'Home', active: isActive(base) },
           ...(config.features.products ? [{ href: `${base}services/`, label: 'Services', active: isActive(`${base}services/`) }] : []),
+          ...(config.features.vending ? [{ href: `${base}vending/`, label: 'Vending', active: isActive(`${base}vending/`) }] : []),
           ...(config.features.faq ? [{ href: `${base}faq/`, label: 'FAQ', active: isActive(`${base}faq/`) }] : []),
           { href: `${base}contact/`, label: 'Contact', active: isActive(`${base}contact/`) },
         ].map(item => (

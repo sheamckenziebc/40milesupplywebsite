@@ -33,6 +33,7 @@ features:
   products: true
   testimonials: false
   faq: true
+  vending: true
   search: false
   comments: false
   analytics: false
