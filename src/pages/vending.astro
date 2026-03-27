@@ -13,7 +13,7 @@ const base = import.meta.env.BASE_URL;
 
 <BaseLayout
   title={`Vending | ${config.site.title}`}
-  description="40 Mile Supply places and services vending machines at mine sites, First Nations buildings, and community facilities on the Silver Trail. Free placement, regular restocking, local operator."
+  description="40 Mile Supply places and services vending machines at facilities along the Silver Trail corridor. Free placement, regular restocking, locally operated from Mayo, Yukon."
 >
   <Header slot="header" />
 
@@ -26,44 +26,43 @@ const base = import.meta.env.BASE_URL;
     </div>
   </div>
 
-  <!-- Intro + who we're targeting -->
+  <!-- Overview + host value props -->
   <section class="py-16 bg-white">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-5 gap-12">
 
-        <!-- Left: overview -->
+        <!-- Left: what we offer -->
         <div class="lg:col-span-3 animate-on-scroll">
           <span class="cyan-rule"></span>
           <h2 class="font-display font-700 text-2xl md:text-3xl text-gray-900 mb-5">What We Offer</h2>
           <p class="text-gray-600 leading-relaxed mb-4">
-            We're placing vending machines at facilities along the Silver Trail corridor. Machines are owned and operated by us — no cost to the host. We handle stocking, maintenance, and servicing on our regular weekend schedule, with product selection tailored to the location.
+            We place and operate vending machines at facilities along the Silver Trail corridor. No cost to the host — machines are owned and operated by us. We handle stocking, maintenance, and servicing on our regular weekend schedule, with product selection tailored to the location.
           </p>
           <p class="text-gray-600 leading-relaxed mb-8">
-            Being based in Mayo means we're already on the road. No waiting on a Whitehorse operator to make a special trip — restocking happens on the same run as everything else.
+            Being based in Mayo means we're already on the road. Restocking happens on the same run as everything else — no waiting on a Whitehorse operator to make a dedicated trip out.
           </p>
 
-          <!-- What hosts get -->
-          <div class="space-y-4">
+          <div class="space-y-5">
             {[
               {
                 icon: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
                 title: "No cost to the host",
-                body: "Machines are placed free of charge. Commission arrangements available for high-volume locations — discussed during the inquiry process."
+                body: "Free placement. Commission arrangements are available for high-volume locations and discussed during the inquiry process."
               },
               {
                 icon: "M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z",
-                title: "Regular restocking on the weekend run",
-                body: "We're already running the corridor. Restocking is built into the weekly schedule — not a special trip that gets delayed."
+                title: "Reliable weekly restocking",
+                body: "Stocked on the regular weekend run. Turnaround is consistent — not dependent on a special trip being scheduled."
               },
               {
                 icon: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2",
                 title: "Product selection input",
-                body: "Hosts can request what goes in the machine. We stock accordingly — snacks, drinks, energy drinks, convenience items."
+                body: "Hosts can specify what goes in the machine. We stock to the location — snacks, drinks, energy drinks, convenience items, or a mix."
               },
               {
                 icon: "M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z M15 12a3 3 0 11-6 0 3 3 0 016 0z",
-                title: "Maintenance handled by us",
-                body: "All repairs, cleaning, and mechanical issues are our responsibility. The host has nothing to manage."
+                title: "Maintenance is our responsibility",
+                body: "Repairs, cleaning, and mechanical issues are handled by us. Nothing for the host to manage or track down."
               },
             ].map(item => (
               <div class="flex items-start gap-4">
@@ -81,34 +80,28 @@ const base = import.meta.env.BASE_URL;
           </div>
         </div>
 
-        <!-- Right: target locations -->
+        <!-- Right: good fit criteria -->
         <div class="lg:col-span-2 animate-on-scroll">
           <div class="bg-brand-navy border border-brand-teal-mid rounded-md p-7">
-            <h3 class="font-display font-700 text-white text-base mb-5 uppercase tracking-wide">Target Locations</h3>
-            <div class="space-y-5">
+            <h3 class="font-display font-700 text-white text-base mb-5 uppercase tracking-wide">Good Placement Fits</h3>
+            <div class="space-y-4">
               {[
-                {
-                  label: "Mine Sites & Camps",
-                  body: "Keno Hill and area operations. Crib rooms, dry facilities, break areas. High-turnover product mix — snacks, energy drinks, water, convenience items."
-                },
-                {
-                  label: "Na-Cho Nyak Dun Buildings",
-                  body: "Band administration, NNDDC facilities, and community buildings in Mayo. Stocked for an office environment with product selection input from staff."
-                },
-                {
-                  label: "Municipal & Federal Buildings",
-                  body: "Village of Mayo offices, federal facilities, and RCMP detachment. Product selection can be adjusted to meet any applicable nutrition or procurement guidelines."
-                },
-                {
-                  label: "Government of Yukon Facilities",
-                  body: "Inquiries from GY facilities are reviewed individually. Placement subject to applicable conflict of interest considerations."
-                },
-              ].map(loc => (
-                <div class="border-b border-brand-teal-mid/40 pb-5 last:border-0 last:pb-0">
-                  <div class="text-xs font-semibold text-brand-cyan uppercase tracking-wider mb-1">{loc.label}</div>
-                  <p class="text-gray-400 text-sm leading-relaxed">{loc.body}</p>
+                "Break room, dry facility, or indoor common area with regular foot traffic",
+                "Workplace or facility where staff don't have convenient access to a store",
+                "20 or more regular daily users",
+                "Indoor or covered space with power access",
+                "Located on or accessible from the Silver Trail corridor",
+              ].map(point => (
+                <div class="flex items-start gap-3">
+                  <svg class="w-4 h-4 text-brand-cyan flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <p class="text-gray-300 text-sm leading-relaxed">{point}</p>
                 </div>
               ))}
+            </div>
+            <div class="mt-6 pt-5 border-t border-brand-teal-mid/50">
+              <p class="text-gray-400 text-xs leading-relaxed">Not sure if your location fits? Send an inquiry and we'll let you know.</p>
             </div>
           </div>
         </div>
@@ -135,7 +128,6 @@ const base = import.meta.env.BASE_URL;
         class="space-y-4 bg-white border border-gray-200 rounded-md p-8"
         id="vending-form"
       >
-        <!-- Hidden field to identify this as a vending inquiry -->
         <input type="hidden" name="freight-type" value="vending-placement" />
         <input type="hidden" name="_subject" value="Vending Placement Inquiry — 40 Mile Supply" />
 
@@ -181,22 +173,22 @@ const base = import.meta.env.BASE_URL;
           <label for="v-location" class="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1.5">Facility / Location *</label>
           <input
             type="text" id="v-location" name="pickup" required
-            placeholder="Building name and location (e.g. Mayo Band Office, Keno Hill dry facility)"
+            placeholder="Building name and general location"
             class="w-full px-4 py-3 bg-white border border-gray-200 rounded text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-brand-cyan/30 focus:border-brand-cyan transition-colors"
           />
         </div>
 
         <div>
-          <label for="v-traffic" class="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1.5">Approximate Daily Foot Traffic</label>
+          <label for="v-traffic" class="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1.5">Approximate Daily Users</label>
           <select
             id="v-traffic" name="delivery"
             class="w-full px-4 py-3 bg-white border border-gray-200 rounded text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-brand-cyan/30 focus:border-brand-cyan transition-colors"
           >
             <option value="">Select a range...</option>
-            <option value="under-20">Under 20 people</option>
-            <option value="20-50">20–50 people</option>
-            <option value="50-100">50–100 people</option>
-            <option value="100-plus">100+ people</option>
+            <option value="under-20">Under 20</option>
+            <option value="20-50">20–50</option>
+            <option value="50-100">50–100</option>
+            <option value="100-plus">100+</option>
           </select>
         </div>
 
@@ -204,7 +196,7 @@ const base = import.meta.env.BASE_URL;
           <label for="v-message" class="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1.5">Additional Details</label>
           <textarea
             id="v-message" name="message" rows="4"
-            placeholder="Anything useful — space available, product preferences, access considerations, existing vending setup, etc."
+            placeholder="Space available, product preferences, access considerations, existing setup — anything useful."
             class="w-full px-4 py-3 bg-white border border-gray-200 rounded text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-brand-cyan/30 focus:border-brand-cyan transition-colors resize-none"
           ></textarea>
         </div>
